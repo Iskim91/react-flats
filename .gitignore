@@ -2,3 +2,5 @@
 dist
 /node_modules
 yarn-error.log
+
+MAPBOX_ACCESS_TOKEN = 'pk.eyJ1IjoiaXNraW05MSIsImEiOiJjazR6cXoydW4wY3l1M2ZxdWRjNTQ3dHFwIn0.bJ1mThyvlomYLk6ehsJpig';
