@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 // import mapboxgl from 'mapbox-gl';
 import GoogleMapReact from 'google-map-react';
 import flats from '../data/flats';
-import FlatList from './flat_list';
-import Marker from './marker';
-
+import FlatList from '../containers/flat_list';
+import Marker from '../containers/marker';
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +17,6 @@ class App extends Component {
     };
   }
 
-
   selectFlat = (coordinates) => {
     this.setState({
       lng: coordinates[0],
@@ -28,7 +26,7 @@ class App extends Component {
 
   center() {
     return {
-      center:{
+      center: {
         lat: this.state.lat,
         lng: this.state.lng
       }
@@ -39,11 +37,11 @@ class App extends Component {
 
     return (
       <div>
-        <FlatList flats={flats} selectFlat={this.selectFlat} />
+        <FlatList selectFlat={this.selectFlat} />
         <div className="map-container">
           <p>lat: {this.state.lat} lng:{this.state.lng}</p>
           <GoogleMapReact
-            bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAP_API_KEY }}
+            bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLEMAP_API_KEY }}
             defaultCenter={this.state.center}
             defaultZoom={this.state.zoom}
           >
