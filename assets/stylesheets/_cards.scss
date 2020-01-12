@@ -6,6 +6,7 @@
   background-position: center;
   color: white;
   position: relative;
+  cursor: pointer;
   &.active {
     border: 10px solid red;
   }
