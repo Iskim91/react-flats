@@ -41,7 +41,7 @@ class App extends Component {
         <div className="map-container">
           <p>lat: {this.state.lat} lng:{this.state.lng}</p>
           <GoogleMapReact
-            bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLEMAP_API_KEY }}
+            bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLEMAP_API }}
             defaultCenter={this.state.center}
             defaultZoom={this.state.zoom}
           >
